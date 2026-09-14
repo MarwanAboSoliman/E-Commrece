@@ -68,7 +68,7 @@ productsRouter.post(
         name: product.name,
         description: product.description,
         price: product.price,
-        image: product.image,
+        image: product.image || "",
       },
     });
   },

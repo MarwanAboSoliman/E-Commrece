@@ -16,7 +16,7 @@ Your job is to implement all the backend for this e-commerce project. The fronte
 ├── routes/
 │   ├── auth.routes.js    ← you create //done✅
 │   ├── products.routes.js← you create //done✅
-│   ├── cart.routes.js    ← you create
+│   ├── cart.routes.js    ← you create //done✅
 │   ├── orders.routes.js  ← you create
 │   └── pages.routes.js   ← already provided (DO NOT MODIFY)
 ├── schema/

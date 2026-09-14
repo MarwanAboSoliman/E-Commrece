@@ -3,6 +3,10 @@ import { pagesRouter } from "./routes/pages.routes.js";
 import { authRouter } from "./routes/auth.routes.js";
 import cookieParser from "cookie-parser";
 import { productsRouter } from "./routes/products.routes.js";
+import { checkAuth } from "./middlewares/checkAuth.js";
+import { checkRole } from "./middlewares/checkRole.js";
+import { cartRouter } from "./routes/cart.routes.js";
+
 process.loadEnvFile();
 
 const app = express();
@@ -17,7 +21,7 @@ app.use((req, res, next) => {
 // TODO: mount your API routers here
 app.use("/auth", authRouter); // /auth/register.html
 app.use("/api/products", productsRouter);
-// app.use("/api/cart", checkAuth, checkRole("customer"), cartRouter);
+app.use("/api/cart", checkAuth, checkRole("customer"), cartRouter);
 // app.use("/api/orders", checkAuth, checkRole("customer"), ordersRouter);
 // app.use("/api/debug", debugRouter);
 
