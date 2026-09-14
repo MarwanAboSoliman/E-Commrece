@@ -1,0 +1,29 @@
+{
+  "auth_users": [
+    {
+      "email": "marawanalaam@gmail.com",
+      "username": "Marwan",
+      "passwordHash": "$2b$10$iRWjoXlqf8QSU7tUEQG90.MENylZH1sIeVx7fNf0WFGreV3rg0aEW",
+      "role": "customer",
+      "id": "7437770"
+    },
+    {
+      "email": "test@gmail.com",
+      "username": "test",
+      "passwordHash": "$2b$10$dXbIA43LdxRklAr6l7nDIONmVSiEbE9YJcDiUt1PfKFU7pf/nQphq",
+      "role": "merchant",
+      "id": "5169010"
+    }
+  ],
+  "products": [
+    {
+      "name": "Tv_Smart",
+      "description": "testTv",
+      "price": 10000,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5HKVzxsgHMcQfl3m7dxVJwTYul50MVw4rQobSwZ_KdQ&s=10",
+      "id": "9261616"
+    }
+  ],
+  "carts": [],
+  "orders": []
+}
