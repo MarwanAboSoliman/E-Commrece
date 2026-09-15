@@ -84,16 +84,15 @@ export function createDB() {
       return JSON.parse(data);
     },
 
-    async search(resource, term) {
+    async search(resource, item) {
       const data = await fs.readFile(dbPath, { encoding: "utf-8" });
       const json = JSON.parse(data);
-      const lowerTerm = term.toLowerCase();
 
       return json[resource].filter(
         (item) =>
-          (item.name && item.name.toLowerCase().includes(lowerTerm)) ||
+          (item.name && item.name.toLowerCase().includes(item.toLowerCase())) ||
           (item.description &&
-            item.description.toLowerCase().includes(lowerTerm)),
+            item.description.toLowerCase().includes(item.toLowerCase())),
       );
     },
   };
