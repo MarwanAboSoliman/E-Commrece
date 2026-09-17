@@ -87,12 +87,12 @@ export function createDB() {
     async search(resource, item) {
       const data = await fs.readFile(dbPath, { encoding: "utf-8" });
       const json = JSON.parse(data);
-
+      const toLower = item.toLowerCase();
       return json[resource].filter(
         (item) =>
-          (item.name && item.name.toLowerCase().includes(item.toLowerCase())) ||
+          (item.name && item.name.toLowerCase().includes(toLower)) ||
           (item.description &&
-            item.description.toLowerCase().includes(item.toLowerCase())),
+            item.description.toLowerCase().includes(toLower)),
       );
     },
   };
