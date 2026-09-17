@@ -7,6 +7,7 @@ import { checkAuth } from "./middlewares/checkAuth.js";
 import { checkRole } from "./middlewares/checkRole.js";
 import { cartRouter } from "./routes/cart.routes.js";
 import { ordersRouter } from "./routes/orders.routes.js";
+import { debugRouter } from "./routes/debug.routes.js";
 
 process.loadEnvFile();
 
@@ -24,7 +25,7 @@ app.use("/auth", authRouter); // /auth/register.html
 app.use("/api/products", productsRouter);
 app.use("/api/cart", checkAuth, checkRole("customer"), cartRouter);
 app.use("/api/orders", checkAuth, checkRole("customer"), ordersRouter);
-// app.use("/api/debug", debugRouter);
+app.use("/api/debug", debugRouter);
 
 app.use(pagesRouter);
 
